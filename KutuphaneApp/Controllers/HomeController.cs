@@ -1,4 +1,7 @@
-﻿using KutuphaneApp.Models;
+﻿using KutuphaneApp.Business.Abstract;
+using KutuphaneApp.Business.Concrate;
+using KutuphaneApp.Entity.Concrate;
+using KutuphaneApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,14 +10,17 @@ namespace KutuphaneApp.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+		private readonly ICategoryService _categoryService;
 
-        public HomeController(ILogger<HomeController> logger)
+		public HomeController(ICategoryService categoryService,ILogger<HomeController> logger)
         {
-            _logger = logger;
+			_categoryService= categoryService;
+			_logger = logger;
         }
 
         public IActionResult Index()
         {
+            _categoryService.Add(new Cateogory() { CategoryName = "Korku" });
             return View();
         }
 
