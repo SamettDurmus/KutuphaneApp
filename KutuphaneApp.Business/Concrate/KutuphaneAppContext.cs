@@ -18,7 +18,7 @@ namespace KutuphaneApp.Business.Concrate
         public KutuphaneAppContext(DbContextOptions<KutuphaneAppContext> options) : base(options) { }
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer(@"server=CANER;database=KutuphaneApp;Integrated Security=true");
+			optionsBuilder.UseSqlServer(@"server=DESKTOP-APLDGVT;database=KutuphaneApp;Integrated Security=true;TrustServerCertificate=True");
 		}
 
 		public virtual DbSet<Author> Authors { get; set; }
