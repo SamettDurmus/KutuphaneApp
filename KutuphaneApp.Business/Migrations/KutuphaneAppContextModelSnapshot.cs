@@ -31,17 +31,11 @@ namespace KutuphaneApp.Business.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AuthorName")
-
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AuthorSurname")
                         .IsRequired()
-
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AuthorSurname")
-
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -85,10 +79,7 @@ namespace KutuphaneApp.Business.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Preface")
-
                         .IsRequired()
-
-
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PublishDate")
@@ -110,13 +101,8 @@ namespace KutuphaneApp.Business.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-
                     b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CategoryName")
-                        .HasColumnType("int");
-
 
                     b.HasKey("Id");
 
@@ -138,9 +124,7 @@ namespace KutuphaneApp.Business.Migrations
                         .HasColumnType("int");
 
                     b.Property<byte[]>("PhotoPaths")
-
                         .IsRequired()
-
                         .HasColumnType("varbinary(max)");
 
                     b.HasKey("Id");

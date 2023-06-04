@@ -20,7 +20,7 @@ namespace KutuphaneApp.Controllers
 
         public IActionResult Index()
         {
-            _categoryService.Add(new Cateogory() { CategoryName = "Korku" });
+            //_categoryService.Add(new Cateogory() { CategoryName = "Korku" });
             return View();
         }
 

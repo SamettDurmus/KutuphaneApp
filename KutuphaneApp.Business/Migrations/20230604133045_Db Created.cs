@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace KutuphaneApp.Business.Migrations
 {
     /// <inheritdoc />
-    public partial class Createddb : Migration
+    public partial class DbCreated : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
