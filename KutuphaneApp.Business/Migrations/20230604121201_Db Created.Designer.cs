@@ -4,6 +4,7 @@ using KutuphaneApp.Business.Concrate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KutuphaneApp.Business.Migrations
 {
     [DbContext(typeof(KutuphaneAppContext))]
-    partial class KutuphaneAppContextModelSnapshot : ModelSnapshot
+    [Migration("20230604121201_Db Created")]
+    partial class DbCreated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,17 +34,9 @@ namespace KutuphaneApp.Business.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AuthorName")
-
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AuthorSurname")
-                        .IsRequired()
-
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AuthorSurname")
-
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -85,10 +80,6 @@ namespace KutuphaneApp.Business.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Preface")
-
-                        .IsRequired()
-
-
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PublishDate")
@@ -110,13 +101,8 @@ namespace KutuphaneApp.Business.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-
-                    b.Property<string>("CategoryName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("CategoryName")
                         .HasColumnType("int");
-
 
                     b.HasKey("Id");
 
@@ -138,9 +124,6 @@ namespace KutuphaneApp.Business.Migrations
                         .HasColumnType("int");
 
                     b.Property<byte[]>("PhotoPaths")
-
-                        .IsRequired()
-
                         .HasColumnType("varbinary(max)");
 
                     b.HasKey("Id");
