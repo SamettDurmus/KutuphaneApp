@@ -17,12 +17,8 @@ namespace KutuphaneApp.Controllers
 			_signInManager=signInManager;
 
 		}
-        public IActionResult Login()
-		{
-			return View();
-		}
-
-		public IActionResult Register()
+		[AllowAnonymous]
+        public IActionResult LoginRegister(string returnUrl)
 		{
 			return View();
 		}

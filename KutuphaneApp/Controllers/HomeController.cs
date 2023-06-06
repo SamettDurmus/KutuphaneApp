@@ -24,7 +24,13 @@ namespace KutuphaneApp.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+		public IActionResult Preview()
+		{
+			//_categoryService.Add(new Cateogory() { CategoryName = "Korku" });
+			return View();
+		}
+
+		public IActionResult Privacy()
         {
             return View();
         }

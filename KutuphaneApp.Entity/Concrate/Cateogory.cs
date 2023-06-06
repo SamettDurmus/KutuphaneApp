@@ -13,5 +13,7 @@ namespace KutuphaneApp.Entity.Concrate
         public int Id { get; set; }
 		[Required(ErrorMessage = "Lütfen 'Kategori' adini boş geçmeyiniz ")]
 		public string? CategoryName { get; set; }
+
+        public List<Book> Books { get; set; }
     }
 }

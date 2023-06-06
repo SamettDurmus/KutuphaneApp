@@ -27,5 +27,6 @@ namespace KutuphaneApp.Business.Concrate
 		public virtual DbSet<Cateogory> Cateogorys { get; set; }
 		public virtual DbSet<Photo> Photos { get; set; }
 		public virtual DbSet<User> Users { get; set; }
+		public virtual DbSet<UserRole> UserRoles { get; set; }
 	}
 }

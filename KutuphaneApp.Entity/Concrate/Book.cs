@@ -16,5 +16,7 @@ namespace KutuphaneApp.Entity.Concrate
 		[Required(ErrorMessage = "Lütfen 'Kitap' adini boş geçmeyiniz ")]
 		public int BookName { get; set; }
         public BookDetail BookDetails { get; set; }
+
+        public List<Cateogory> Cateogories { get; set; }
     }
 }
